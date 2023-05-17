@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Start</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		
+
+	</head>
+	<body>
+		<script>
+			document.addEventListener("keypress", function onPress(event) {
+				document.getElementById("search").focus();
+			});
+		</script>
+		<div class="pageContainer">
+			<div class="vertAlign">
+	 			<div id="timedate">
+					<h1 id="time"></h1>
+					<em><code>Every saint has a past and every sinner has a future</code></em>
+				</div>	
+				<script>
+					function refreshTime() {
+						var today = new Date();
+						var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+						document.getElementById("time").innerHTML = time;
+					}
+					setInterval(refreshTime, 1000);
+				</script>
+
+				<div class="boxContainer">
+						<div class="box">
+							<div class="boxHeader" id="boxHeader1">hobby</div>
+							<ul>
+								<li><a href="https://github.com/">github</a></li>
+								<li><a href="https://stackoverflow.com/">Stack Overflow</a></li>
+								<li><a href="https://reddit.com/r/programming">/r/programming</a></li>
+								<li><a href="https://reddit.com/r/linux">/r/linux</a></li>
+								<li><a href="https://reddit.com/r/photography">/r/photography</a></li>
+								<li><a href="https://www.reddit.com/r/itookapicture/">/r/itap</a></li>
+							</ul>
+						</div>
+						<div class="box">
+							<div class="boxHeader" id="boxHeader2">social</div>
+							<ul>
+								<li><a href="https://discord.com/app">discord</a></li>
+								<li><a href="http://reddit.com">reddit</a></li>
+								<li><a href="http://news.ycombinator.com">hacker news</a></li>
+								<li><a href="https://youtube.com">youtube</a></li>
+							</ul>
+						</div>
+				</div>
+				<div class="search">
+					<form autocomplete="off" class="searchForm" method="GET" action="https://duckduckgo.com/?q=">
+						<input class="searchInput" id="search" type="text" name="q">
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
