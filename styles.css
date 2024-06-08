@@ -44,7 +44,7 @@ body {
 	padding: 10px;
 	backdrop-filter: blur(10px);
 	-webkit-backdrop-filter: blur(10px);
-
+	border-radius: 8px;
 }
 ul {
 	z-index: 2;
